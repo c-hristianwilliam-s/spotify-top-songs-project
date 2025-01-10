@@ -14,6 +14,9 @@ CREATE TABLE Spotify_final_dataset(
 --How many artists have top songs?
 SELECT COUNT(DISTINCT "Artist Name") FROM "Spotify_final_dataset";
 
+--Total streams
+SELECT SUM("Total Streams") FROM "Spotify_final_dataset";
+
 --Songs that hit #1 and how many times it hit #1
 SELECT "Artist Name", "Song Name", "Peak Position (xTimes)" FROM "Spotify_final_dataset"
 WHERE "Peak Position" = 1;
@@ -33,6 +36,9 @@ ORDER BY "Peak Streams" DESC LIMIT 1;
 --Which song had the least peak streams
 SELECT "Artist Name", "Song Name", "Peak Streams" FROM "Spotify_final_dataset"
 ORDER BY "Peak Streams" ASC LIMIT 1;
+
+--Which artist has the most songs in the top songs list
+SELECT "Artist Name" FROM "Spotify_final_dataset" 
 
 --Which artists had multiple songs in the top 10.
 SELECT "Artist Name", COUNT("Artist Name") FROM "Spotify_final_dataset"
