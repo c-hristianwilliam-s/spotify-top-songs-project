@@ -49,5 +49,8 @@ SELECT "Song Name" FROM "Spotify_final_dataset" ORDER BY "Top 10(xTimes)" ASC LI
 SELECT "Artist Name", "Song Name", "Days" FROM "Spotify_final_dataset" 
 ORDER BY "Days" DESC LIMIT 1;
 
+--Which songs contain the word "Love" it
+SELECT "Song Name" FROM "Spotify_final_dataset" WHERE "Song Name" LIKE '%love%'
+OR "Song Name" LIKE '%Love';
 
 
