@@ -11,11 +11,15 @@ CREATE TABLE Spotify_final_dataset(
 	"Total Streams" NUMERIC
 )
 
+--How many songs in this data set
+SELECT COUNT(*) FROM "Spotify_final_dataset";
+
 --How many artists have top songs?
 SELECT COUNT(DISTINCT "Artist Name") FROM "Spotify_final_dataset";
 
 --Total streams
 SELECT SUM("Total Streams") FROM "Spotify_final_dataset";
+
 
 --Songs that hit #1 and how many times it hit #1
 SELECT "Artist Name", "Song Name", "Peak Position (xTimes)" FROM "Spotify_final_dataset"
@@ -68,6 +72,9 @@ OR "Song Name" LIKE '%Love';
 
 --Top songs where the artist is SZA and their position
 SELECT "Song Name", "Position" FROM "Spotify_final_dataset" WHERE "Artist Name" = 'SZA ';
+
+--What songs only remained at their peak position for one week
+SELECT "Song Name", "Position" FROM "Spotify_final_dataset" WHERE "Peak Position (xTimes)" = '0';
 
 
 
