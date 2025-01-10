@@ -38,7 +38,14 @@ SELECT "Artist Name", "Song Name", "Peak Streams" FROM "Spotify_final_dataset"
 ORDER BY "Peak Streams" ASC LIMIT 1;
 
 --Which artist has the most songs in the top songs list
-SELECT "Artist Name" FROM "Spotify_final_dataset" 
+SELECT "Artist Name", COUNT("Artist Name") FROM "Spotify_final_dataset" 
+GROUP BY "Artist Name"
+ORDER BY COUNT("Artist Name") DESC LIMIT 1;
+
+--Which artist has the least songs in the top songs list
+SELECT "Artist Name", COUNT("Artist Name") FROM "Spotify_final_dataset" 
+GROUP BY "Artist Name"
+ORDER BY COUNT("Artist Name") ASC LIMIT 1;
 
 --Which artists had multiple songs in the top 10.
 SELECT "Artist Name", COUNT("Artist Name") FROM "Spotify_final_dataset"
