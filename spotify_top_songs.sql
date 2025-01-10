@@ -53,4 +53,11 @@ ORDER BY "Days" DESC LIMIT 1;
 SELECT "Song Name" FROM "Spotify_final_dataset" WHERE "Song Name" LIKE '%love%'
 OR "Song Name" LIKE '%Love';
 
+--Top songs where the artist is SZA and their position
+SELECT "Song Name", "Position" FROM "Spotify_final_dataset" WHERE "Artist Name" = 'SZA ';
+
+
+
+
+
 
