@@ -31,7 +31,11 @@ SELECT "Artist Name", COUNT("Artist Name") FROM "Spotify_final_dataset"
 WHERE "Top 10(xTimes)" > 1 GROUP BY "Artist Name"
 ORDER BY "Artist Name";
 
+--What artist have songs in the top 100.
+SELECT DISTINCT "Artist Name" FROM "Spotify_final_dataset" WHERE "Position" <= 100;
 
+--Top songs where the artist is SZA and their position
+SELECT "Song Name", "Position" FROM "Spotify_final_dataset" WHERE "Artist Name" = 'SZA ';
 
 
 
@@ -67,7 +71,6 @@ ORDER BY "Peak Streams" DESC LIMIT 1;
 SELECT "Artist Name", "Song Name", "Peak Streams" FROM "Spotify_final_dataset"
 ORDER BY "Peak Streams" ASC LIMIT 1;
 
-
 --Which song was in the top 10 the most amount of times
 SELECT "Song Name" FROM "Spotify_final_dataset" ORDER BY "Top 10(xTimes)" DESC LIMIT 1;
 
@@ -81,9 +84,6 @@ ORDER BY "Days" DESC LIMIT 1;
 --Which songs contain the word "Love" it
 SELECT "Song Name" FROM "Spotify_final_dataset" WHERE "Song Name" LIKE '%love%'
 OR "Song Name" LIKE '%Love';
-
---Top songs where the artist is SZA and their position
-SELECT "Song Name", "Position" FROM "Spotify_final_dataset" WHERE "Artist Name" = 'SZA ';
 
 --What songs only remained at their peak position for one week
 SELECT "Song Name", "Position" FROM "Spotify_final_dataset" WHERE "Peak Position (xTimes)" = '0';
