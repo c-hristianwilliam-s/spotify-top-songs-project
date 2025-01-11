@@ -79,8 +79,10 @@ SELECT "Song Name", "Position" FROM "Spotify_final_dataset" WHERE "Artist Name" 
 --What songs only remained at their peak position for one week
 SELECT "Song Name", "Position" FROM "Spotify_final_dataset" WHERE "Peak Position (xTimes)" = '0';
 
+--Average amount of days a song has been on the top charts
+SELECT AVG("Days") FROM "Spotify_final_dataset";
 
-
-
+--How many songs have been in the top 10
+SELECT COUNT("Top 10(xTimes)") FROM "Spotify_final_dataset" WHERE "Top 10(xTimes)" > 0.0;
 
 
