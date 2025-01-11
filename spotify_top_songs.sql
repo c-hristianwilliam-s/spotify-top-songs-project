@@ -37,6 +37,9 @@ SELECT DISTINCT "Artist Name" FROM "Spotify_final_dataset" WHERE "Position" <= 1
 --Top songs where the artist is SZA and their position
 SELECT "Song Name", "Position" FROM "Spotify_final_dataset" WHERE "Artist Name" = 'SZA ';
 
+--Which artists have "The" in their stage name
+SELECT DISTINCT"Artist Name" FROM "Spotify_final_dataset" WHERE "Artist Name" LIKE 'The %';
+
 
 
 
