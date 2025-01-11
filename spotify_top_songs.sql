@@ -14,6 +14,9 @@ CREATE TABLE Spotify_final_dataset(
 --How many songs in this data set
 SELECT COUNT(*) FROM "Spotify_final_dataset";
 
+--Top 50 songs ever
+SELECT "Song Name", "Artist Name" FROM "Spotify_final_dataset" LIMIT 50;
+
 --How many artists have top songs?
 SELECT COUNT(DISTINCT "Artist Name") FROM "Spotify_final_dataset";
 
